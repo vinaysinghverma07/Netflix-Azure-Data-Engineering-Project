@@ -1,0 +1,6 @@
+selected resource name:		pipeline1
+selected resource type:		pipeline
+factory name:			adf-netflix-vinay
+factory location:		eastus
+subscription id:		"your subscription id"
+time of download (UTC):		Fri, 21 Nov 2025 09:24:31 GMT
