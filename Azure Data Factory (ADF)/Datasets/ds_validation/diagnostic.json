@@ -1,0 +1,23 @@
+{
+    "now": "2025-11-21T08:57:27.076Z",
+    "perfNow": 4723133.3,
+    "diagnosticCorrelation": "ef8a6fa9-06fb-405a-8aae-7ae7ee9bd730",
+    "source": "DownloadSupportFiles",
+    "environment": {
+        "productName": "adf",
+        "buildVersion": "1.0.102825.7",
+        "environmentType": 3,
+        "resourceName": "adf-netflix-vinay",
+        "resourceRegion": "eastus",
+        "resourceGroup": "RG-NetflixProject",
+        "subscriptionId": "b465aa87-b9b9-4629-9dec-02621827ede2",
+        "sessionId": "i2s6L+c1y5pxpKUunwohTn",
+        "operationId": "",
+        "gitType": "live",
+        "loggingKey": "ac0f52d2-7f1f-455a-868f-3f7f71dcda7a"
+    },
+    "additionalInfo": {
+        "selectedResource": "ds_validation",
+        "selectedResourceType": "dataset"
+    }
+}
