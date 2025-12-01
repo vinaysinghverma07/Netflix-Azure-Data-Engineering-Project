@@ -2,5 +2,5 @@ selected resource name:		ds_validation
 selected resource type:		dataset
 factory name:			adf-netflix-vinay
 factory location:		eastus
-subscription id:		b465aa87-b9b9-4629-9dec-02621827ede2
+subscription id:		your_subscription_id
 time of download (UTC):		Fri, 21 Nov 2025 08:57:27 GMT
