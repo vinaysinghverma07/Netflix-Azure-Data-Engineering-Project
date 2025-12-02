@@ -177,7 +177,7 @@ Load from Silver Delta paths and publish to Gold layer as streaming Delta tables
 ### Installation
 1. Clone this repository:
    ```bash
-git clone https://github.com/vinaysinghverma07/Netflix-Azure-Data-Engineering-Project.git
+    git clone https://github.com/vinaysinghverma07/Netflix-Azure-Data-Engineering-Project.git
 
 ### **Why This Structure Works for Your Case**:
 1. **Description**: Tailored to your actual architecture using ADF, ADLS Gen2, Databricks, Workflows and DLT.
