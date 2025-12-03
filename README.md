@@ -74,14 +74,15 @@ Gold Layer (Business Ready Tables)
 
 ## 🔧 Technologies Used
 
-- **Azure Data Factory**
-- **Azure Data Lake Storage Gen2**
-- **Azure Databricks**
-- **Azure Workflows/pipeline/lakeflow spark declaritive pipeline** 
-- **Delta Live Tables**
-- **PySpark**
-- **GitHub**
 
+- **Azure Data Factory**     ![Azure Data Factory](https://img.shields.io/badge/Azure%20Data%20Factory-3178C6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+- **Azure Data Lake Storage Gen2**     ![Azure Data Lake Gen2](https://img.shields.io/badge/Azure%20Data%20Lake%20Gen2-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+- **Azure Databricks**     ![Azure Databricks](https://img.shields.io/badge/Azure%20Databricks-EF3E2E?style=for-the-badge&logo=databricks&logoColor=white)
+- **PySpark**     ![PySpark](https://img.shields.io/badge/PySpark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black)
+- **Delta Live Tables**     ![Delta Live Tables](https://img.shields.io/badge/Delta%20Live%20Tables-FF4F4F?style=for-the-badge&logo=databricks&logoColor=white)
+- **Azure Workflows/pipeline/lakeflow spark declaritive pipeline**
+- **GitHub**
+- ![Medallion Architecture](https://img.shields.io/badge/Medallion%20Architecture-000000?style=for-the-badge)
 ---
 
 ## Features
@@ -124,21 +125,8 @@ Write as Delta to Silver: `df.write.format("delta")...save(f"abfss://silver@.../
 
 ### 4️⃣ Automation using Lookup Notebook  
 Define a JSON array mapping sourcefolder → targetfolder for datasets (directors, cast, countries, category).  
-Use `dbutils.jobs.taskValues.set(key="my_array", value=files)` to pass the mapping to workflow.  
+Use `dbutils.jobs.taskValues.set(key="my_array", value=files)` to pass the mapping to workflow.  (File/sample shared in databricks folder above)
 Databricks Workflow iterates over this array and executes 2_silver for each mapping.
-
-### 5️⃣ Business Transformation Notebook (4_silver)  
-Perform data cleaning and type casting: fill nulls, cast duration fields to integer.  
-Split columns: title → Shorttitle, rating → rating.  
-Create flags: type_flag based on type (Movie or TV Show).  
-Apply window function: `dense_rank` over duration descending.  
-Create temporary views: temp_view and global_view.  
-Write final cleaned data to Silver layer (Delta) path: `abfss://silver@.../netflix_titles`.
-
-### 6️⃣ Gold Layer using Delta Live Tables (DLT)  
-Define data quality rules, e.g. show_id is not null.  
-Create DLT tables for directors, cast, countries, category, titles, each using `@dlt.table` and `@dlt.expect_all_or_drop`.  
-Load from Silver Delta paths and publish to Gold layer as streaming Delta tables.
 
 ### 5️⃣ Business Transformation Notebook (4_silver)  
 Perform data cleaning and type casting: fill nulls, cast duration fields to integer.  
@@ -187,3 +175,4 @@ Load from Silver Delta paths and publish to Gold layer as streaming Delta tables
 
 
 Let me know if you need further modifications!
+
